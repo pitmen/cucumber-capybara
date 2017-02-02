@@ -1,7 +1,3 @@
-Capybara.register_driver :selenium do |app|
-  	Capybara::Selenium::Driver.new(app, :browser => :chrome)
-end
-
 Dado(/^que eu acessei a pagina do google$/) do
   visit "http://www.google.com.br"
 end
