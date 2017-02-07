@@ -4,6 +4,7 @@ end
 
 Quando(/^eu digitar uma pesquisa$/) do
   fill_in 'q', with: 'teste'
+  # dá um "enter" no campo
   find('#lst-ib').native.send_keys(:return)
   sleep 5
 end
