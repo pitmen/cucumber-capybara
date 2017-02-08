@@ -10,6 +10,5 @@ Capybara.configure do |config|
   config.run_server = false
   config.default_driver = :selenium
   config.app_host = 'https://www.google.com.br/' # change url
-  $logger = Logger.new('C:/automacao/test.log', 'monthly')
-  
+  $logger = Logger.new('C:/automacao/test.log', 'monthly')  
 end

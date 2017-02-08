@@ -9,6 +9,10 @@ Quando(/^eu digitar uma pesquisa$/) do
   # dá um "enter" no campo
   #find('#lst-ib').native.send_keys(:return)
   @google = GooglePage.new
+  
+  # verificar o título da página
+  expect(@google.get_title).to eq 'Google'
+ 
   @google.fazer_pesquisa('teste')
   $logger.info'Fez a pesquisa'
 end

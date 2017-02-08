@@ -4,9 +4,11 @@ class GooglePage < SitePrism::Page
     # faz a pesquisa
     def fazer_pesquisa(pesquisa)
         campo_busca.set pesquisa
-        campo_busca.native.send_keys(:return)
-       
+        campo_busca.native.send_keys(:return)  
     end
-    
+
+    def get_title
+        page.title
+    end
 
 end
