@@ -5,9 +5,11 @@ Dado(/^que eu acessei a pagina do google$/) do
 end
 
 Quando(/^eu digitar uma pesquisa$/) do
-  fill_in 'q', with: 'teste'
+  #fill_in 'q', with: 'teste'
   # dá um "enter" no campo
-  find('#lst-ib').native.send_keys(:return)
+  #find('#lst-ib').native.send_keys(:return)
+  @google = GooglePage.new
+  @google.fazer_pesquisa('teste')
   $logger.info'Fez a pesquisa'
 end
 
