@@ -1,3 +1,4 @@
+# classe que representa a página do google
 class GooglePage < SitePrism::Page
     element :campo_busca, "input[name='q']"
 
